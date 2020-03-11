@@ -1,0 +1,116 @@
+@import "../variables/variables";
+
+.nav {
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    height: 7rem;
+    width: 100%;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+
+    background-color: white;
+    position: relative;
+    transition: all .1s;
+
+
+    // box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    &.page {
+      cursor: pointer;
+
+      &:hover {
+        background-color: lightgrey;
+      }
+    }
+
+    &.selected {
+        background-color: $main-blue;
+        
+        & h1{
+            color: white;
+        }
+        &:hover {
+            background-color: $main-blue;
+          }
+    }
+
+    &__titles {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      pointer-events: none;
+      & h1 {
+        position: absolute;
+        z-index: 5;
+        margin: 0;
+        color: rgb(30, 49, 156);
+      }
+
+      & h1 {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+      }
+    }
+
+
+
+    &.nav__loader {
+      background: inherit;
+
+      & div {
+        height: 10rem;
+        width: 10rem;
+        background: red;
+      }
+    }
+
+    & input {
+      background: transparent;
+      width: 80%;
+      height: 100%;
+      border: 0;
+      color: grey;
+      font-size: 16px;
+
+      
+
+      &::placeholder {
+        color: lightgrey;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    & input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      
+      -webkit-text-fill-color: lightgrey;
+      -webkit-box-shadow: none;
+      background-color: white;
+      transition: background-color 5000s ease-in-out 0s;
+      font-size: 14px;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

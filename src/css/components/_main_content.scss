@@ -1,0 +1,20 @@
+@import "../variables/variables";
+
+.content {
+    position: absolute; 
+    top: 7rem;
+    width: calc(100% - 36rem);
+    left: 30rem;
+    min-height: calc(100% - 13rem);
+    background: white;
+    z-index: 1;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home {
+    color: $main-blue;
+}

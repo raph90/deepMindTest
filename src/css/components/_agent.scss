@@ -1,0 +1,68 @@
+@import "../variables/variables";
+
+
+
+.agent-container {
+    grid-column: span 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr) );
+}
+.agent, .comparison {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    
+}
+table {
+    table-layout: fixed;
+}
+table, th, td {
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid lightgrey;
+    width: 100%;
+    border-collapse: collapse;
+    padding: .5rem;
+}
+
+th {
+    color: $main-blue;
+}
+
+.agent {
+    border-radius: 2px;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    padding: 2rem;
+
+    &__heading {
+        color: $main-blue;
+        margin-bottom: 0;
+    }
+
+    &__description {
+        font-size: 16px;
+    }
+}
+
+.comparison {
+    min-width: 40rem;
+    height: 20rem;
+    margin: 0 1.5rem;
+    margin-bottom: 1.5rem;
+    background: white;
+    padding: 2rem;
+
+    &__title {
+        color: $main-blue;
+    }
+
+    & th, td {
+        padding: 1rem;
+    }
+
+    & td.larger {
+        background-color: rgba(137, 228, 137, 0.808);
+    }
+
+    & td.smaller {
+        background-color: rgba(240, 119, 119, 0.671);
+    }
+}

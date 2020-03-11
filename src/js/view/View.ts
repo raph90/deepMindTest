@@ -32,7 +32,6 @@ class View {
     } else {
       this.hideHome(true);
       if (selectedPages.length === 1) {
-        console.log("yees")
         this.removeComparisonPage();
       } else {
         this.appendComparisonPage(selectedPages);
